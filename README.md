@@ -13,6 +13,9 @@ const links = document.getElementByTagName('a');
 
 links.style.color = 'hotpink';    // This will not work, loop first!
 links[0].style.color = 'hotpink'; // This will work, first index, one item
+for(const link of links){
+    link.style.color = 'hotpink'; // This will work, each item
+}
 ```
 6. Vet du inte om du har fått rätt element eller om din klickfunktion fungerar? Testa använd `console.log` och skriv ut variablen eller ett meddelandet till `console` för att se så att någonting fungerar. [Läs mer om hur du kan använda `console` här](https://dev.to/worldclassdev/leveraging-the-power-of-the-javascript-console-in-development-24ap)
 7. Vill du slippa `console.log` hela tiden för att se vad som händer i koden? Öppna **Sources** i *Chrome/Firefox Developer Tools*. Här kan du sätta ut **Breakpoints** genom att trycka på linjenumret bredvid koden så att siffran blir blå. Då säger du åt Chrome att stanna upp koden vid det tillfället så att du kan se vad som händer och koden kommer inte att fortsätta förän du säger åt den att den ska göra det. Till vänster ser du alla dina filer. I mitten är en editor och till höger är information om koden.
